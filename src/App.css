@@ -1,38 +1,344 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Added a fallback font */
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 90%;
+  min-height: 70vh;
+  max-width: 1000px; 
+  margin: 0 auto; 
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+}
+
+.contact h2 {
+  color: red;
+  font-weight: 500; 
+}
+.contant h1{
+  padding-bottom: 23px;
+  font-weight: 600;
+  font-size: 43px;
+}
+.contant p{
+  padding-bottom: 30px;
+  line-height: 25px;
+}
+.contant button{
+  padding: 10px 20px;
+  background-color: #ee2121de;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+}
+.contant button:hover{
+  opacity: 0.8  ;
+  color: black;
+  scale: 1.1;
+}
+.img img {
+  width: 100%; 
+  min-height: 70vh;
+  height: auto; 
+  border-radius: 5px;
+}
+
+.contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  z-index: 999;
+  left: 200px;
+  bottom: 210px;
+  width: 60vw;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-container h2 {
+  margin-top: 0;
+}
+
+.contact-container .name {
+  display: flex;
+  gap: 5px;
+}
+
+.contact-container input,
+.contact-container button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-container button {
+  background-color: rgb(238, 83, 109);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-container button:hover {
+  opacity: 0.8;
+}
+
+.mflex{
+  display: flex;
+  flex-direction: column;
+}
+.m1flex{
+  display: flex;
+}
+
+main{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.button img {
+  margin: 0 5px; /* Added margin for spacing between images */
+}
+
+.mflex h2{
+  color:#ee2121de;
+  font-weight: 500;
+}
+
+.contact-container{
+  margin: auto 0;
+  position: relative;
+}
+.check{
+  display: flex;
+}
+
+.hcard{
+  background-color: rgb(238, 83, 109);
+  width: 400px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hcard a{
+  color: rgb(238, 83, 109);
+  padding: 10px;
+  text-decoration: none;
+  background-color: white;
+  width: 500px;
+}
+.hcard img{
+  width: 50px;
+}
+
+.left img{
+  width: 530px;
+  height: 374px;
+}
+
+.right{
+  width: 260px;
+  height: 365px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.conimg{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.upper h2{
+  font-weight: 600;
+  color: red;
+}
+
+.right button{
+  border: none;
+}
+.conflex{
+  padding: 20px;
+}
+
+.right button{
+  padding: 4.2%;
+  cursor: pointer;
+}
+
+.right{
+  border: none;
+}
+.right button:hover{
+  background-color: #ee2121de;
+  color: white;
+}
+.upper{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.growth{
+  padding-top:50px;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  padding-bottom: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cards{
+  display: flex;
+  gap: 40px;
+}
+
+.card{
+  padding-top: 12px;
+  box-shadow: 0px 1px 4px #e3e3e3;
+  width: 195px;
+}
+.card img{
+  width: 30px;
+}
+
+.card:hover{
+  scale: 1.1;
+  box-shadow: 1px 2px 4px #9f9b9b;
+}
+.conflex{
+  width: 80vw;
+  margin: 0 auto;
+}
+
+button h2{
+  font-size: 15px;
+}
+
+.card h1{
+  margin-bottom: -10px;
+}
+
+.card img{
+  margin-bottom: -15px;
+}
+
+.card{
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 90%; 
   }
-  to {
-    transform: rotate(360deg);
+
+  .button img {
+    width: 30px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    width: 100%; 
+  }
+
+  .button img {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width:966px) {
+  .right{
+    flex-direction: row;
+  }
+  .right button{
+    padding: 17.1%;
+  }
+  .conimg{
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width:780px) {
+  .contact-container{
+    left: 100px;
+  }
+}
+@media screen and (max-width:445px) {
+  .contact-container{
+    left: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .name{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contact {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width:416px) {
+  .name{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .contact {
+    width: 100%;
+    padding: 5px; 
   }
 }
