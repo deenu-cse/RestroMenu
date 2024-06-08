@@ -1,344 +1,233 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif; /* Added a fallback font */
+  box-sizing: border-box;
+  background-image: url("https://www.welovesolo.com/wp-content/uploads/2016/08/04smkzrj1ozml42-1280x720.jpg");
+  background-size: cover;
 }
 
-.App-header {
-  width: 100%;
-  height: 100vh;
+.hero {
+  width: 80vw;
+  height: 85vh;
+  display: flex;
+  margin: 70px auto;
+}
+
+.hero .img{
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slide-up 1s forwards;
+}
+
+.hero .contant{
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slide-uper 2s forwards;
+}
+.hero .btn{
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slide-uperr 2.3s forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-uper {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-uperr {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.img img {
+  width: 450px;
+  height: 450px;
+}
+
+.contant {
+  color: white;
+  padding-top: 40px;
+}
+
+.contant h1 span{
+  color: yellow;
+}
+
+.btn button {
+  padding: 10px 25px;
+  background-color: rgb(52, 51, 51);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.btn {
+  padding-top: 55px;
+}
+
+.btn button:hover {
+  background-color: rgb(130, 127, 127);
+  color: black;
+}
+
+.upper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.contact {
-  border: 1px solid gray;
-  border-radius: 8px;
-  width: 90%;
-  min-height: 70vh;
-  max-width: 1000px; 
-  margin: 0 auto; 
-  display: flex;
-  padding: 20px;
-  gap: 15px;
-}
-
-.contact h2 {
-  color: red;
-  font-weight: 500; 
-}
-.contant h1{
-  padding-bottom: 23px;
-  font-weight: 600;
-  font-size: 43px;
-}
-.contant p{
-  padding-bottom: 30px;
-  line-height: 25px;
-}
-.contant button{
-  padding: 10px 20px;
-  background-color: #ee2121de;
+.btns button {
+  padding: 8px 15px;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  border-radius: 4px;
   border: none;
-  border-radius: 2px;
+  background-color: rgb(52, 51, 51);
   color: white;
   cursor: pointer;
 }
-.contant button:hover{
-  opacity: 0.8  ;
+
+.btns button:hover {
+  background-color: rgb(130, 127, 127);
   color: black;
-  scale: 1.1;
-}
-.img img {
-  width: 100%; 
-  min-height: 70vh;
-  height: auto; 
-  border-radius: 5px;
 }
 
-.contact-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+.cardx {
+  padding-right: 12px;
+  width: 90vw;
+  margin: 15px auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-container {
-  z-index: 999;
-  left: 200px;
-  bottom: 210px;
-  width: 60vw;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.contact-container form {
-  display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
-.contact-container h2 {
-  margin-top: 0;
+.card {
+  cursor: pointer;
+  width: clamp(300px, 40vw, 180px);
+  height: 290px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(228 29 29), -2px -2px 3px rgb(228 29 29);
+  border: none;
+  margin-bottom: 15px;
 }
 
-.contact-container .name {
-  display: flex;
-  gap: 5px;
-}
-
-.contact-container input,
-.contact-container button {
-  padding: 10px;
-  border: 1px solid #ccc;
+.cimg img {
+  width: clamp(300px, 40vw, 180px);
+  height: 290px;
   border-radius: 5px;
 }
 
-.contact-container button {
-  background-color: rgb(238, 83, 109);
-  color: white;
-  border: none;
-  cursor: pointer;
+.card h2 {
+  margin-top: -40px;
+  margin-left: 10px;
+  z-index: 999;
+  color: rgb(208 56 56);
 }
 
-.contact-container button:hover {
-  opacity: 0.8;
+.upper h1 {
+  color: rgb(208 56 56);
 }
 
-.mflex{
+.hover-content{
+  display: none;
+}
+.card:hover {
+  scale: 1.05;
+  transition: all 0.2s ease-in;
+  .hover-content {
+    transition: all 0.2s ease-in;
+    background-color: rgba(29, 28, 28, 0.677);
+    height: 300px;
+    z-index: 999;
+    pointer-events: none;
+    pointer-events: none;
+    margin-top: -310px;
+    display: block;
+    position: absolute;
+  }
+}
+
+.hover-content p {
+  font-size: 22px;
+  color: rgb(208 56 56);
+  margin-left: 10px;
+}
+/* App.css */
+
+.location {
+  width: 80%; /* Change width to percentage for responsiveness */
+  max-width: 800px; /* Set a maximum width to prevent it from getting too wide on larger screens */
+  margin: 50px auto;
+  border-radius: 5px;
+  padding-left: 30px; 
+  box-shadow: 2px 2px 2px rgb(209, 180, 180), -2px -2px 3px rgb(210, 170, 170);
+  color: rgb(208, 160, 160);
+}
+
+.flex2 img {
+ width: 100%;
+ height: 100%;
+}
+
+.flexme {
   display: flex;
-  flex-direction: column;
-}
-.m1flex{
-  display: flex;
 }
 
-main{
-  width: 80%;
-  margin: 0 auto;
+.flexme .flex1, .flexme .flex2 {
+  width: 100%; 
 }
 
-.button {
-  display: flex;
-  justify-content: center;
+.flex1 h2 {
+  margin-bottom: 20px;
 }
 
-.button img {
-  margin: 0 5px; /* Added margin for spacing between images */
+.thank {
+  margin-top: 60px;
+  color: yellow;
 }
 
-.mflex h2{
-  color:#ee2121de;
-  font-weight: 500;
+.location h2 span {
+  color: yellow;
 }
 
-.contact-container{
-  margin: auto 0;
-  position: relative;
-}
-.check{
-  display: flex;
-}
-
-.hcard{
-  background-color: rgb(238, 83, 109);
-  width: 400px;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.hcard a{
-  color: rgb(238, 83, 109);
-  padding: 10px;
-  text-decoration: none;
-  background-color: white;
-  width: 500px;
-}
-.hcard img{
-  width: 50px;
-}
-
-.left img{
-  width: 530px;
-  height: 374px;
-}
-
-.right{
-  width: 260px;
-  height: 365px;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-}
-
-.conimg{
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.upper h2{
-  font-weight: 600;
-  color: red;
-}
-
-.right button{
-  border: none;
-}
-.conflex{
-  padding: 20px;
-}
-
-.right button{
-  padding: 4.2%;
-  cursor: pointer;
-}
-
-.right{
-  border: none;
-}
-.right button:hover{
-  background-color: #ee2121de;
-  color: white;
-}
-.upper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.growth{
-  padding-top:50px;
-  width: 80vw;
-  margin: 0 auto;
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
-  padding-bottom: 60px;
-}
-
-.cards{
-  display: flex;
-  gap: 40px;
-}
-
-.card{
-  padding-top: 12px;
-  box-shadow: 0px 1px 4px #e3e3e3;
-  width: 195px;
-}
-.card img{
-  width: 30px;
-}
-
-.card:hover{
-  scale: 1.1;
-  box-shadow: 1px 2px 4px #9f9b9b;
-}
-.conflex{
-  width: 80vw;
-  margin: 0 auto;
-}
-
-button h2{
-  font-size: 15px;
-}
-
-.card h1{
-  margin-bottom: -10px;
-}
-
-.card img{
-  margin-bottom: -15px;
-}
-
-.card{
-  text-align: center;
-}
-
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-  main {
-    width: 90%; 
+  .location {
+    padding: 20px; /* Reduce padding for smaller screens */
   }
 
-  .button img {
-    width: 30px; 
-  }
-}
-
-@media screen and (max-width: 480px) {
-  main {
-    width: 100%; 
+  .flexme {
+    flex-direction: column; /* Change flex direction to column on smaller screens */
   }
 
-  .button img {
-    width: 20px;
-  }
-}
-
-@media screen and (max-width:966px) {
-  .right{
-    flex-direction: row;
-  }
-  .right button{
-    padding: 17.1%;
-  }
-  .conimg{
-    flex-direction: column-reverse;
-  }
-}
-
-@media screen and (max-width:780px) {
-  .contact-container{
-    left: 100px;
-  }
-}
-@media screen and (max-width:445px) {
-  .contact-container{
-    left: 50px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .name{
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .contact {
-    flex-direction: column-reverse;
-  }
-}
-
-@media screen and (max-width:416px) {
-  .name{
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .contact {
-    padding: 10px;
-  }
-}
-
-
-@media screen and (max-width: 480px) {
-  .contact {
-    width: 100%;
-    padding: 5px; 
+  .flex2 img {
+    margin-top: 0; /* Remove top margin on image for smaller screens */
   }
 }
